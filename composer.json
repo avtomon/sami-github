@@ -1,10 +1,14 @@
 {
-    "name": "devedge/sami-github",
+    "name": "avtomon/sami-github",
     "description": "A Sami theme for GitHub Markdown formatted documentation. (this is a fork of phine/sami-github)",
     "keywords": ["sami", "github"],
     "homepage": "https://github.com/ppetermann/sami-github",
     "license": "MIT",
     "authors": [
+        {
+            "name": "Aleksandr Avtomonov",
+            "email": "avtomon86@gmail.com"
+        },
         {
             "name": "Kevin Herrera",
             "email": "kevin@herrera.io",
