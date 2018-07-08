@@ -3,17 +3,17 @@
 {% from "macros.twig" import class_item %}
 
 {% block title %}
-{% set title = "Classes" %}
+{% set title = "Классы" %}
 {{ parent() }}
 {% endblock %}
 
 {% block content %}
 
-This is a complete list of available classes:
+Полный список доступных классов:
 
 {% for class in classes if not class.interface %}
 {{ class_item(class) }}
 {% else %}
-- There are no classes available.
+- Нет доступных классов.
 {% endfor %}
 {% endblock %}

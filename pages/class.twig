@@ -14,36 +14,36 @@
 {% endif %}
 {% if class.longdesc %}
 
-Description
+Описание
 -----------
 
 {{ class.longdesc|raw }}
 {% endif %}
 
-Signature
+Сигнатура
 ---------
 
-- It is a(n) **{{ class_type(class) }}**.
+- **{{ class_type(class) }}**.
 {% if class.final %}
-- The {{ class_type(class) }} has been marked as **final**.
+- {{ class_type(class) }} помечен как **final**.
 {% endif %}
 {% if class.interfaces|length > 1 %}
-- It implements the following interfaces:
+- Реализует следующие интерфейсы:
 {% for interface in class.interfaces %}
 {{ class_item(interface, false, "    ") }}
 {% endfor %}
 {% elseif class.interfaces|length > 0 %}
-- It implements the {{ class_name(class.interfaces[0], true) }} interface.
+- Реализует интерфейс {{ class_name(class.interfaces[0], true) }}.
 {% endif %}
 {% if class.parent %}
-- It is a subclass of {{ class_name(class.parent, true) }}.
+- Является подклассом класса {{ class_name(class.parent, true) }}.
 {% endif %}
 {% if class.constants %}
 
-Constants
+Константы
 ---------
 
-This {{ class_type(class) }} defines the following constants:
+{{ class_type(class) }} устанавливает следующие константы:
 
 {% for constant in class.constants %}
 - [`{{ constant.name }}`](#{{ constant.name }}){% if constant.shortdesc %} &mdash; {{ constant.shortdesc }}{% endif %}
@@ -58,10 +58,10 @@ This {{ class_type(class) }} defines the following constants:
 {% endif %}
 {% if class.properties %}
 
-Properties
+Свойства
 ----------
 
-This {{ class_type(class) }} defines the following properties:
+{{ class_type(class) }} устанавливает следующие свойства:
 
 {% for property in class.properties %}
 - [`${{ property.name }}`](#${{ property.name }}){% if property.shortdesc %} &mdash; {{ property.shortdesc }}{% endif %}
@@ -76,22 +76,22 @@ This {{ class_type(class) }} defines the following properties:
 {% endif %}
 {% if property.longdesc %}
 
-#### Description
+#### Описание
 
 {{ property.longdesc|raw }}
 {% endif %}
 
-#### Signature
+#### Сигнатура
 
 {{ member_signature("property", property) }}
 {% endfor %}
 {% endif %}
 {% if class.methods %}
 
-Methods
+Методы
 -------
 
-The {{ class_type(class) }} defines the following methods:
+Методы класса {{ class_type(class) }}:
 
 {% for method in class.methods %}
 - [`{{ method.name }}()`](#{{ method.name }}){% if method.shortdesc %} &mdash; {{ method.shortdesc }}{% endif %}
@@ -106,13 +106,13 @@ The {{ class_type(class) }} defines the following methods:
 {% endif %}
 {% if method.longdesc %}
 
-#### Description
+#### Описание
 
 {{ method.longdesc|raw }}
 {% endif %}
 {% if method.tags("see") %}
 
-#### See Also
+#### Кроме того
 
 {% for tag in method.tags("see") %}
 - `{{ tag[0] }}`{% if tag[1] is defined %} &mdash; {{ tag[1:]|join(" ") }}{% endif %}
@@ -120,7 +120,7 @@ The {{ class_type(class) }} defines the following methods:
 {% endfor %}
 {% endif %}
 
-#### Signature
+#### Сигнатура
 
 {{ member_signature("method", method) }}
 {% endfor %}

@@ -3,17 +3,17 @@
 {% from "macros.twig" import markdown_path %}
 
 {% block title %}
-{% set title = "Namespaces" %}
+{% set title = "Пространства имён" %}
 {{ parent() }}
 {% endblock %}
 
 {% block content %}
 
-This is a complete list of available namespaces:
+Полный список пространств имён:
 
 {% for namespace in namespaces %}
 - [`{{ namespace }}`]({{ namespace_path(namespace)|replace({".html": ""}) }})
 {% else %}
-- There are no namespaces available.
+- Нет доступных пространств имён.
 {% endfor %}
 {% endblock %}

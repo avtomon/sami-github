@@ -49,7 +49,7 @@ Installation
 
 Via [Composer][]:
 
-    $ composer require "devedge/sami-github=~1.0"
+    $ composer require "avtomon/sami-github=~1.0"
 
 License
 -------
