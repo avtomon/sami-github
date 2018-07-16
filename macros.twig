@@ -66,7 +66,7 @@ class
 {% if member.parameters %}
 - Может принимать следующий параметр(ы):
 {% for parameter in member.parameters %}
-    - `${{ parameter.name }}`{% if parameter.hint %} ({% for hint in parameter.hint %}{{ macros.hint(hint) }}{% if not loop.last %}|{% endif %}{% endfor %}){% endif %}{% if parameter.shortdesc %} &mdash; {{ parameter.shortdesc }}{% endif %}
+    - `${{ parameter.name }}`{% if parameter.hint %} ({% for hint in parameter.hint %}{{ macros.hint(hint) }}{% if not loop.last %}|{% endif %}{% endfor %}){% endif %}{% if parameter.shortdesc %} {{ parameter.shortdesc }}{% endif %}
 
 {% endfor %}
 {% endif %}
