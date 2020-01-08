@@ -24,7 +24,7 @@
         "issues": "https://github.com/avtomon/sami-github/issues"
     },
     "require-dev": {
-        "sami/sami": "~1.1"
+        "sami/sami": "*"
     },
     "autoload": {
         "psr-0": {
